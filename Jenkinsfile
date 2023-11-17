@@ -13,7 +13,11 @@ pipeline{
       {
           steps{
 
-            sh "sudo yum install httpd -y"
+              sh "rm -rf * "
+              sh "git clone https://github.com/Akirandive/vel-app1.git "
+              echo "clone completed...."
+              sh "chmod -R 777 /mnt/slave2"
+             sh "sudo yum install httpd -y"
           }
          
       }
